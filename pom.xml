@@ -3,7 +3,7 @@
 
 	<groupId>com.java.interview</groupId>
 	<artifactId>java-interview</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.3</version>
 	<packaging>jar</packaging>
 
 	<name>java-interview</name>
@@ -107,8 +107,8 @@
 		          <providerImplementations>  
 		            <git>jgit</git>  
 		          </providerImplementations>  
-		          <username>admin</username>  
-		          <password>admin123</password>  
+		          <username>scj2085@163.com</username>  
+		          <password>shichangjian123</password>  
 		          <tagBase>${project.artifactId}-${project.version}</tagBase>  
 		          <goals>-f pom.xml deploy</goals>  
 		        </configuration>  
