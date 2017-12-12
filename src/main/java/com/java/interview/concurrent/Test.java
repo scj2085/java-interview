@@ -9,31 +9,31 @@ public class Test {
 	
 	
 	
-	public static void main(String[] args) {
-		ConcurrentUtil exec = new ConcurrentUtil();
-		ThreadFactory nameThreadFactory = new ThreadFactoryBuilder().setNameFormat("pool-%d").build();
-		exec.init2(nameThreadFactory);
-		
-		ExecutorService pool = exec.getCustomThreadPoolExecutor();
-		pool.execute(new MyRunNable());
-		
-		
-//		for(int i = 1; i<100; i++) {  
-//            System.out.println("提交第" + i + "个任务!"); 
-//            pool.execute(new MyRunNable());
-//            pool.execute(new Runnable() {  
-//                @Override  
-//                public void run() {  
-//                    try {  
-//                        Thread.sleep(3000);  
-//                    } catch (InterruptedException e) {  
-//                        e.printStackTrace();  
-//                    }  
-//                    System.err.println("running=====");  
-//                }  
-//            });  
-//        }
-	}
+//	public static void main(String[] args) {
+//		ConcurrentUtil exec = new ConcurrentUtil();
+//		ThreadFactory nameThreadFactory = new ThreadFactoryBuilder().setNameFormat("pool-%d").build();
+//		exec.init2(nameThreadFactory);
+//		
+//		ExecutorService pool = exec.getCustomThreadPoolExecutor();
+//		pool.execute(new MyRunNable());
+//		
+//		
+////		for(int i = 1; i<100; i++) {  
+////            System.out.println("提交第" + i + "个任务!"); 
+////            pool.execute(new MyRunNable());
+////            pool.execute(new Runnable() {  
+////                @Override  
+////                public void run() {  
+////                    try {  
+////                        Thread.sleep(3000);  
+////                    } catch (InterruptedException e) {  
+////                        e.printStackTrace();  
+////                    }  
+////                    System.err.println("running=====");  
+////                }  
+////            });  
+////        }
+//	}
 	
 	/**
 	 * Runnable接口实现多线程

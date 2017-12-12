@@ -239,40 +239,40 @@ public class ConcurrentUtil {
       
       
     // 测试构造的线程池  
-    public static void main(String[] args) {  
-    	ConcurrentUtil exec = new ConcurrentUtil();  
-        // 1.初始化  
-        exec.init();  
-          
-        ExecutorService pool = exec.getCustomThreadPoolExecutor();
-        
-        for(int i = 1; i<100; i++) {  
-            System.out.println("提交第" + i + "个任务!");  
-            pool.execute(new Runnable() {  
-                @Override  
-                public void run() {  
-//                    try {  
-//                        Thread.sleep(3000);  
-//                    } catch (InterruptedException e) {  
-//                        e.printStackTrace();  
-//                    }  
-                    System.err.println("running=====");  
-                }  
-            });  
-        }  
-          
-          
-          
-        // 2.销毁----此处不能销毁,因为任务没有提交执行完,如果销毁线程池,任务也就无法执行了  
-        // exec.destory();  
-          
-        try {  
-            Thread.sleep(10000);  
-        } catch (InterruptedException e) {  
-            e.printStackTrace();  
-        }  
-    } 
-    
+//    public static void main(String[] args) {  
+//    	ConcurrentUtil exec = new ConcurrentUtil();  
+//        // 1.初始化  
+//        exec.init();  
+//          
+//        ExecutorService pool = exec.getCustomThreadPoolExecutor();
+//        
+//        for(int i = 1; i<100; i++) {  
+//            System.out.println("提交第" + i + "个任务!");  
+//            pool.execute(new Runnable() {  
+//                @Override  
+//                public void run() {  
+////                    try {  
+////                        Thread.sleep(3000);  
+////                    } catch (InterruptedException e) {  
+////                        e.printStackTrace();  
+////                    }  
+//                    System.err.println("running=====");  
+//                }  
+//            });  
+//        }  
+//          
+//          
+//          
+//        // 2.销毁----此处不能销毁,因为任务没有提交执行完,如果销毁线程池,任务也就无法执行了  
+//        // exec.destory();  
+//          
+//        try {  
+//            Thread.sleep(10000);  
+//        } catch (InterruptedException e) {  
+//            e.printStackTrace();  
+//        }  
+//    } 
+//    
     
     
     

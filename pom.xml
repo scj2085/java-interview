@@ -35,7 +35,7 @@
 	</dependencies>
 
 
-<!-- 下载插件构件 -->
+<!-- 插件构件 -->
 	<distributionManagement>
 		<repository>
 			<id>nexus-releases</id>

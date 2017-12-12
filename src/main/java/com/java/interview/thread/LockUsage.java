@@ -204,38 +204,38 @@ public class LockUsage {
 		          
 		} 
 	} 
-	public  static  void main(String[] args) {  
-	       //创建一个锁对象 ,非公平锁  ，读写锁
-	       ReadWriteLock lock = new ReentrantReadWriteLock(false);    
-	       //创建一个线程池    
-	       ExecutorService pool = Executors.newCachedThreadPool();   
-	       //设置一个账号，设置初始金额为10000  
-	       Account account = new Account(lock,"123456",10000);  
-	          
-	       //账号取钱10次，存钱10次，查询20次  
-	       for(int i=1;i<=10;i++) {  
-	           Operation operation1 = new Operation(account,"take");  
-	           Operation operation2 = new Operation(account,"query");  
-	           Operation operation3 = new Operation(account,"save");  
-	           Operation operation4 = new Operation(account,"query");  
-	           pool.execute(operation1);  
-	           pool.execute(operation2);  
-	           pool.execute(operation3);  
-	           pool.execute(operation4);  
-	       }  
-	       
-//	       	可以关闭 ExecutorService，这将导致其拒绝新任务。
-//	      	 线程池运行中可以通过shutdown()和shutdownNow()来改变运行状态。
-//	       shutdown()是一个平缓的关闭过程，线程池停止接受新的任务，同时等待已经提交的任务执行完毕，包括那些进入队列还没有开始的任务，这时候线程池处于SHUTDOWN状态；
-//	       shutdownNow()是一个立即关闭过程，线程池停止接受新的任务，同时线程池取消所有执行的任务和已经进入队列但是还没有执行的任务，这时候线程池处于STOP状态
-	       pool.shutdown();  
-	       
-//	      	 一旦shutdown()或者shutdownNow()执行完毕，线程池就进入TERMINATED状态，此时线程池就结束了。
-//	       isTerminating()描述的是SHUTDOWN和STOP两种状态。
-//	       isShutdown()描述的是非RUNNING状态，也就是SHUTDOWN/STOP/TERMINATED三种状态
-	       while(!pool.isTerminated()){    
-	           //wait for all tasks to finish    
-	       }    
-	       System.out.println("账号"+ account.getAccoutNo() +",最后金额为："+account.getMoney());    
-	   }
+//	public  static  void main(String[] args) {  
+//	       //创建一个锁对象 ,非公平锁  ，读写锁
+//	       ReadWriteLock lock = new ReentrantReadWriteLock(false);    
+//	       //创建一个线程池    
+//	       ExecutorService pool = Executors.newCachedThreadPool();   
+//	       //设置一个账号，设置初始金额为10000  
+//	       Account account = new Account(lock,"123456",10000);  
+//	          
+//	       //账号取钱10次，存钱10次，查询20次  
+//	       for(int i=1;i<=10;i++) {  
+//	           Operation operation1 = new Operation(account,"take");  
+//	           Operation operation2 = new Operation(account,"query");  
+//	           Operation operation3 = new Operation(account,"save");  
+//	           Operation operation4 = new Operation(account,"query");  
+//	           pool.execute(operation1);  
+//	           pool.execute(operation2);  
+//	           pool.execute(operation3);  
+//	           pool.execute(operation4);  
+//	       }  
+//	       
+////	       	可以关闭 ExecutorService，这将导致其拒绝新任务。
+////	      	 线程池运行中可以通过shutdown()和shutdownNow()来改变运行状态。
+////	       shutdown()是一个平缓的关闭过程，线程池停止接受新的任务，同时等待已经提交的任务执行完毕，包括那些进入队列还没有开始的任务，这时候线程池处于SHUTDOWN状态；
+////	       shutdownNow()是一个立即关闭过程，线程池停止接受新的任务，同时线程池取消所有执行的任务和已经进入队列但是还没有执行的任务，这时候线程池处于STOP状态
+//	       pool.shutdown();  
+//	       
+////	      	 一旦shutdown()或者shutdownNow()执行完毕，线程池就进入TERMINATED状态，此时线程池就结束了。
+////	       isTerminating()描述的是SHUTDOWN和STOP两种状态。
+////	       isShutdown()描述的是非RUNNING状态，也就是SHUTDOWN/STOP/TERMINATED三种状态
+//	       while(!pool.isTerminated()){    
+//	           //wait for all tasks to finish    
+//	       }    
+//	       System.out.println("账号"+ account.getAccoutNo() +",最后金额为："+account.getMoney());    
+//	   }
 }

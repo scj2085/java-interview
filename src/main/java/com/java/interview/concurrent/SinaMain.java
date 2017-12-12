@@ -36,38 +36,38 @@ public class SinaMain {
            }  
        }
 	 }
-	public static void main(String[] args) {
-		
-		ThreadFactory nameThreadFactory = new ThreadFactoryBuilder().setNameFormat("pool-%d").build();
-		ExecutorService pool = 
-				new ThreadPoolExecutor(
-						2, 
-						9, 
-						30, 
-						TimeUnit.MILLISECONDS,
-						new ArrayBlockingQueue<Runnable>(60),
-						nameThreadFactory, 
-						(RejectedExecutionHandler) new CustomRejectedExecutionHandler());
-		//单个线程
-//		ExecutorService pool = new ConcurrentUtil().newSingleThreadExecutor();
-				
-				
-		long starttime = System.currentTimeMillis();
-		System.out.println("开始时间：" + starttime);
-		SinaUtils sinaUtils = new SinaUtils();
-		sinaUtils.countJavaSource(pool, "E://");
-		pool.shutdown();//让所有的入队任务都执行完毕
-		while (true) {
-			if (pool.isTerminated()) {
-				long endtime = System.currentTimeMillis();
-				System.out.println("结束时间：" + endtime);
-				System.out.println("总用时间：" + (endtime - starttime) / 1000);
-				System.out.println("文件个数：" + SinaUtils.filenum);
-				System.out.println("代码行数" + SinaUtils.codeline + "行\t注释行数" + SinaUtils.commentline);
-				break;
-			}
-		}
-	}
+//	public static void main(String[] args) {
+//		
+//		ThreadFactory nameThreadFactory = new ThreadFactoryBuilder().setNameFormat("pool-%d").build();
+//		ExecutorService pool = 
+//				new ThreadPoolExecutor(
+//						2, 
+//						9, 
+//						30, 
+//						TimeUnit.MILLISECONDS,
+//						new ArrayBlockingQueue<Runnable>(60),
+//						nameThreadFactory, 
+//						(RejectedExecutionHandler) new CustomRejectedExecutionHandler());
+//		//单个线程
+////		ExecutorService pool = new ConcurrentUtil().newSingleThreadExecutor();
+//				
+//				
+//		long starttime = System.currentTimeMillis();
+//		System.out.println("开始时间：" + starttime);
+//		SinaUtils sinaUtils = new SinaUtils();
+//		sinaUtils.countJavaSource(pool, "E://");
+//		pool.shutdown();//让所有的入队任务都执行完毕
+//		while (true) {
+//			if (pool.isTerminated()) {
+//				long endtime = System.currentTimeMillis();
+//				System.out.println("结束时间：" + endtime);
+//				System.out.println("总用时间：" + (endtime - starttime) / 1000);
+//				System.out.println("文件个数：" + SinaUtils.filenum);
+//				System.out.println("代码行数" + SinaUtils.codeline + "行\t注释行数" + SinaUtils.commentline);
+//				break;
+//			}
+//		}
+//	}
 	
 	public static class SinaUtils {
 	    public static AtomicLong codeline = new AtomicLong();

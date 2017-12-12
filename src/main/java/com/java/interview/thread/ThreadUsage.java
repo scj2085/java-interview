@@ -281,9 +281,9 @@ public class ThreadUsage {
 
 	}
 	
-	public static void main(String[] args) {
-		Thread thread = new MyThread3(new Work());
-		thread.start();
-	}
+//	public static void main(String[] args) {
+//		Thread thread = new MyThread3(new Work());
+//		thread.start();
+//	}
     
 }

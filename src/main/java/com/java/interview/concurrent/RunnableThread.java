@@ -55,7 +55,7 @@ public class RunnableThread {
 
 	}
 	
-	public static void main(String[] args) {  
+//	public static void main(String[] args) {  
 //		MyThread mt1 = new MyThread("线程a");  
 //		MyThread mt2 = new MyThread("线程b");  
 //		此时结果很有规律，先第一个对象执行，然后第二个对象执行，并没有相互运行
@@ -92,9 +92,9 @@ public class RunnableThread {
 //		new Thread(mt).start();//同一个mt，但是在Thread中就不可以，如果用同一 个实例化对象mt，就会出现异常
 //		new Thread(mt).start(); 
 //		new Thread(mt).start();//虽然现在程序中有三个线程，但是一共卖了10张票，也就是说使用Runnable实现多线程可以达到资源共享目的
-		MyRunNable mt=new MyRunNable();  
-		new Thread(mt).start();//同一个mt，但是在Thread中就不可以，如果用同一  
-		new Thread(mt).start();//个实例化对象mt，就会出现异常  
-		new Thread(mt).start();  
-	}  
+//		MyRunNable mt=new MyRunNable();  
+//		new Thread(mt).start();//同一个mt，但是在Thread中就不可以，如果用同一  
+//		new Thread(mt).start();//个实例化对象mt，就会出现异常  
+//		new Thread(mt).start();  
+//	}  
 }
