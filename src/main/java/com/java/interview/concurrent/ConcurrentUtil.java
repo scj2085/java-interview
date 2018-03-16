@@ -36,9 +36,9 @@ public class ConcurrentUtil {
     /** 
      * 线程池初始化方法 
      *  
-     * corePoolSize 核心线程池大小----10 
-     * maximumPoolSize 最大线程池大小----30 
-     * keepAliveTime 线程池中超过corePoolSize数目的空闲线程最大存活时间----30+单位TimeUnit 
+     * corePoolSize 核心线程池大小---- 
+     * maximumPoolSize 最大线程池大小---- 
+     * keepAliveTime 线程池中超过corePoolSize数目的空闲线程最大存活时间----30+单位TimeUnit表示线程没有任务执行时最多保持多久时间会终止。默认情况下，只有当线程池中的线程数大于corePoolSize时，keepAliveTime才会起作用，直到线程池中的线程数不大于corePoolSize，即当线程池中的线程数大于corePoolSize时，如果一个线程空闲的时间达到keepAliveTime，则会终止，直到线程池中的线程数不超过corePoolSize。但是如果调用了allowCoreThreadTimeOut(boolean)方法，在线程池中的线程数不大于corePoolSize时，keepAliveTime参数也会起作用，直到线程池中的线程数为0； 
      * TimeUnit keepAliveTime时间单位----TimeUnit.MINUTES 
      * workQueue 阻塞队列----new ArrayBlockingQueue<Runnable>(10)====10容量的阻塞队列 
      * threadFactory 新建线程工厂----new CustomThreadFactory()====定制的线程工厂 
@@ -55,10 +55,12 @@ public class ConcurrentUtil {
 	 *	5.当线程池中超过corePoolSize线程，空闲时间达到keepAliveTime时，关闭空闲线程 
 	 *	6.当设置allowCoreThreadTimeOut(true)时，线程池中corePoolSize线程空闲时间达到keepAliveTime也将关闭
 	 *	
-	 *	第1-10个线程放入池中执行任务（依据条件核心线程池corePoolSize），
-	 *	第11-20个线程进入阻塞队列中等待（依据条件workQueue），
-	 *	第21-40线程放入池中执行任务（依据条件最大线程池maximumPoolSize）
-	 *	第41-休眠恢复 报警处理RejectedExecutionHandler
+	 *  一下都是在阻塞情况下测试
+	 *	第1-2个线程放入核心池中执行任务（依据条件核心线程池corePoolSize），现在核心池中2个线程再跑
+	 *	继续阻塞第1-16个线程进入阻塞队列中等待（依据条件workQueue），现在阻塞队列中16个线程再跑，核心池中还是2个
+	 *  核心池和阻塞队列都满，核心池中线程活跃数会从2加到9
+	 *  核心池和阻塞队列都满，核心池中线程活跃数9，也就是最大线程池9，此时会报警
+	 *	报警处理RejectedExecutionHandler抛给线程池再执行
      */  
     public void init() {  
         pool = new ThreadPoolExecutor(  
@@ -144,23 +146,6 @@ public class ConcurrentUtil {
     }
     
     /**  
-     * 每天晚上9点执行一次  
-     * 每天定时安排任务进行执行  
-     */    
-    public static void executeEightAtNightPerDay() {    
-        ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);    
-        long oneDay = 24 * 60 * 60 * 1000;    
-        long initDelay  = getTimeMillis("21:00:00") - System.currentTimeMillis();    
-        initDelay = initDelay > 0 ? initDelay : oneDay + initDelay;    
-        
-        executor.scheduleAtFixedRate(    
-                new MyHandle(),    
-                initDelay,    
-                oneDay,    
-                TimeUnit.MILLISECONDS);    
-    }    
-      
-    /**  
      * 获取指定时间对应的毫秒数  
      * 周期性的执行一个任务，可以使用下面方法设定每天在固定时间执行一次任务
      * @param time "HH:mm:ss"  
@@ -189,7 +174,23 @@ public class ConcurrentUtil {
     }  
       
       
-    public ExecutorService getCustomThreadPoolExecutor() {  
+    /**  
+	 * 每天晚上9点执行一次  
+	 * 每天定时安排任务进行执行  
+	 */    
+	public static void executeEightAtNightPerDay() {    
+	    ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);    
+	    long oneDay = 24 * 60 * 60 * 1000;    
+	    long initDelay  = getTimeMillis("21:00:00") - System.currentTimeMillis();    
+	    initDelay = initDelay > 0 ? initDelay : oneDay + initDelay;    
+	    
+	    executor.scheduleAtFixedRate(    
+	            new MyHandle(),    
+	            initDelay,    
+	            oneDay,    
+	            TimeUnit.MILLISECONDS);    
+	}
+	public ExecutorService getCustomThreadPoolExecutor() {  
         return this.pool;  
     }  
       
@@ -229,6 +230,7 @@ public class ConcurrentUtil {
             try {  
                 // 核心改造点，由blockingqueue的offer改成put阻塞方法  
 //            	当提交任务被拒绝时，进入拒绝机制，我们实现拒绝方法，把任务重新用阻塞提交方法put提交，实现阻塞提交任务功能，防止队列过大，OOM（内存泄漏和溢出）
+            	System.err.println(executor.toString());
                 executor.getQueue().put(r);  
             } catch (InterruptedException e) {  
                 e.printStackTrace();  
@@ -239,41 +241,44 @@ public class ConcurrentUtil {
       
       
     // 测试构造的线程池  
-//    public static void main(String[] args) {  
-//    	ConcurrentUtil exec = new ConcurrentUtil();  
-//        // 1.初始化  
-//        exec.init();  
-//          
-//        ExecutorService pool = exec.getCustomThreadPoolExecutor();
-//        
-//        for(int i = 1; i<100; i++) {  
-//            System.out.println("提交第" + i + "个任务!");  
-//            pool.execute(new Runnable() {  
-//                @Override  
-//                public void run() {  
-////                    try {  
-////                        Thread.sleep(3000);  
-////                    } catch (InterruptedException e) {  
-////                        e.printStackTrace();  
-////                    }  
-//                    System.err.println("running=====");  
-//                }  
-//            });  
-//        }  
-//          
-//          
-//          
-//        // 2.销毁----此处不能销毁,因为任务没有提交执行完,如果销毁线程池,任务也就无法执行了  
-//        // exec.destory();  
-//          
+    public static void main(String[] args) {  
+    	ConcurrentUtil exec = new ConcurrentUtil();  
+        // 1.初始化  
+        exec.init();  
+          
+        ExecutorService pool = exec.getCustomThreadPoolExecutor();
+        
+        for(int i = 1; i<100; i++) {  
+            System.out.println("提交第" + i + "个任务!");  
+            pool.execute(new Runnable() {  
+                @Override  
+                public void run() {  
+                    try {  
+                        Thread.sleep(30000);  
+                    } catch (InterruptedException e) {  
+                        e.printStackTrace();  
+                    }  
+                    exec.sys();
+                }  
+            });  
+        }  
+          
+          
+          
+//         2.销毁----此处不能销毁,因为任务没有提交执行完,如果销毁线程池,任务也就无法执行了  
+//         exec.destory();  
+          
 //        try {  
 //            Thread.sleep(10000);  
 //        } catch (InterruptedException e) {  
 //            e.printStackTrace();  
 //        }  
-//    } 
-//    
-    
+    } 
+    public void sys(){
+    	a++;
+    	System.err.println("running=====执行任务==" + a);
+    }
+    int a = 0;
     
     
     
