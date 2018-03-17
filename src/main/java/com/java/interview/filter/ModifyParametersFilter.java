@@ -47,6 +47,7 @@ public class ModifyParametersFilter extends OncePerRequestFilter {
 //        if (token != null && CheckMobile.check(ua)) {
 //        	mParametersWrapper.putHeader("Cookie", "JSESSIONID="+token);
 //        }
+        // 把请求传回过滤链
         filterChain.doFilter(mParametersWrapper, response);
     }
 

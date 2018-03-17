@@ -30,6 +30,8 @@ public class ConfigurationFilter {
 	}
 
 	public class MyFilter implements Filter {
+		
+		//destroy() 方法只会被调用一次，在 Servlet 生命周期结束时被调用。destroy() 方法可以让您的 Servlet 关闭数据库连接、停止后台线程、把 Cookie 列表或点击计数器写入到磁盘，并执行其他类似的清理活动
 		@Override
 		public void destroy() {
 		}
@@ -41,9 +43,10 @@ public class ConfigurationFilter {
 			HttpServletRequest request = (HttpServletRequest) srequest;
 			// 打印请求Url
 			System.err.println("this is MyFilter,url :" + request.getRequestURI());
+			// 把请求传回过滤链
 			filterChain.doFilter(srequest, sresponse);
 		}
-
+		//它在第一次创建 Servlet 时被调用，在后续每次用户请求时不再调用
 		@Override
 		public void init(FilterConfig arg0) throws ServletException {
 		}

@@ -6459,3 +6459,362 @@ java.lang.ArrayIndexOutOfBoundsException: -64
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
 
+2018-03-17 13:23:56.085  INFO 9788 --- [main] c.j.interview.JavaInterviewApplication   : Starting JavaInterviewApplication on SHICHANGJIAN with PID 9788 (D:\Users\shichangjian.MEIXIN\workspace\testProject\java-interview\target\classes started by shichangjian in D:\Users\shichangjian.MEIXIN\workspace\testProject\java-interview)
+2018-03-17 13:23:56.126  INFO 9788 --- [main] c.j.interview.JavaInterviewApplication   : No active profile set, falling back to default profiles: default
+2018-03-17 13:23:56.186  INFO 9788 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@34a875b3: startup date [Sat Mar 17 13:23:56 CST 2018]; root of context hierarchy
+2018-03-17 13:23:56.923  INFO 9788 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2018-03-17 13:23:59.104  INFO 9788 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 22222 (http)
+2018-03-17 13:23:59.122  INFO 9788 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-03-17 13:23:59.124  INFO 9788 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.32
+2018-03-17 13:23:59.272  INFO 9788 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-17 13:23:59.273  INFO 9788 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3091 ms
+2018-03-17 13:24:01.913  INFO 9788 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-17 13:24:01.914  INFO 9788 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-17 13:24:01.914  INFO 9788 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-17 13:24:01.914  INFO 9788 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-17 13:24:01.915  INFO 9788 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'MyFilter' to urls: [/a/*]
+2018-03-17 13:24:01.915  INFO 9788 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'modifyParametersFilter' to urls: [/a/*]
+2018-03-17 13:24:01.915  INFO 9788 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'testFilter1' to urls: [/*]
+2018-03-17 13:24:01.915  INFO 9788 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'tokenAuthorFilter' to urls: [/login/*]
+2018-03-17 13:24:01.916  INFO 9788 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-17 13:24:03.359  INFO 9788 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@34a875b3: startup date [Sat Mar 17 13:23:56 CST 2018]; root of context hierarchy
+2018-03-17 13:24:03.623  INFO 9788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a/httpClientTest]}" onto public java.lang.String com.java.interview.controller.ClientTest.httpclient(java.lang.String) throws java.lang.Exception
+2018-03-17 13:24:03.625  INFO 9788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/httpClientTest2]}" onto public java.lang.String com.java.interview.controller.ClientTest.httpclient(com.java.interview.util.User) throws java.lang.Exception
+2018-03-17 13:24:03.626  INFO 9788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test],methods=[GET]}" onto public void com.java.interview.httpclient.HttpClientManagerFactoryBenTest.test() throws org.apache.http.client.ClientProtocolException,java.io.IOException,java.lang.InterruptedException,java.util.concurrent.ExecutionException
+2018-03-17 13:24:03.626  INFO 9788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/httpThreadPool]}" onto public java.lang.String com.java.interview.httpclient.HttpClientManagerFactoryBenTest.httpThreadPool() throws org.apache.http.ParseException,java.io.IOException,java.lang.InterruptedException,java.util.concurrent.ExecutionException
+2018-03-17 13:24:03.627  INFO 9788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/loadProperties],methods=[GET]}" onto public void com.java.interview.properties.DynamicConfig.loadProperties(java.lang.String,java.lang.String)
+2018-03-17 13:24:03.629  INFO 9788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-17 13:24:03.630  INFO 9788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-17 13:24:03.853  INFO 9788 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-17 13:24:03.853  INFO 9788 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-17 13:24:03.964  INFO 9788 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-17 13:24:04.419  INFO 9788 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-03-17 13:24:04.513  INFO 9788 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 22222 (http)
+2018-03-17 13:24:04.519  INFO 9788 --- [main] c.j.interview.JavaInterviewApplication   : Started JavaInterviewApplication in 9.328 seconds (JVM running for 10.196)
+2018-03-17 13:26:13.288  INFO 9788 --- [http-nio-22222-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-03-17 13:26:13.289  INFO 9788 --- [http-nio-22222-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-03-17 13:26:13.364  INFO 9788 --- [http-nio-22222-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 75 ms
+2018-03-17 13:28:55.191  INFO 9788 --- [http-nio-22222-exec-2] com.java.interview.aop.WebLogAspect      : 环绕增强方法之前进入
+2018-03-17 13:29:01.415  INFO 9788 --- [http-nio-22222-exec-2] com.java.interview.aop.WebLogAspect      : 进入登录接口之前
+2018-03-17 13:29:13.332  INFO 9788 --- [http-nio-22222-exec-2] com.java.interview.aop.WebLogAspect      : 环绕增强方法结束后进入
+2018-03-17 13:29:30.093  INFO 9788 --- [http-nio-22222-exec-2] com.java.interview.aop.WebLogAspect      : 最终增强，方法结束后进入
+2018-03-17 13:29:58.911  INFO 9788 --- [http-nio-22222-exec-2] com.java.interview.aop.WebLogAspect      : 后置增强方法结束后进入
+2018-03-17 13:33:32.849  INFO 9788 --- [http-nio-22222-exec-3] com.java.interview.aop.WebLogAspect      : 环绕增强方法之前进入
+2018-03-17 13:33:35.369  INFO 9788 --- [http-nio-22222-exec-3] com.java.interview.aop.WebLogAspect      : 进入登录接口之前
+2018-03-17 13:33:48.316  INFO 9788 --- [http-nio-22222-exec-3] com.java.interview.aop.WebLogAspect      : 环绕增强方法结束后进入
+2018-03-17 13:33:59.654  INFO 9788 --- [http-nio-22222-exec-3] com.java.interview.aop.WebLogAspect      : 最终增强，方法结束后进入
+2018-03-17 13:34:09.623  INFO 9788 --- [http-nio-22222-exec-3] com.java.interview.aop.WebLogAspect      : 后置增强方法结束后进入
+2018-03-17 13:35:31.094  INFO 9788 --- [http-nio-22222-exec-4] com.java.interview.aop.WebLogAspect      : 环绕增强方法之前进入
+2018-03-17 13:35:45.062  INFO 9788 --- [http-nio-22222-exec-4] com.java.interview.aop.WebLogAspect      : 进入登录接口之前
+2018-03-17 13:36:07.196  INFO 9788 --- [http-nio-22222-exec-4] com.java.interview.aop.WebLogAspect      : 环绕增强方法结束后进入
+2018-03-17 13:36:32.499  INFO 9788 --- [http-nio-22222-exec-4] com.java.interview.aop.WebLogAspect      : 最终增强，方法结束后进入
+2018-03-17 13:36:45.404  INFO 9788 --- [http-nio-22222-exec-4] com.java.interview.aop.WebLogAspect      : 后置增强方法结束后进入
+2018-03-17 13:37:12.196  INFO 9788 --- [http-nio-22222-exec-5] com.java.interview.aop.WebLogAspect      : 环绕增强方法之前进入
+2018-03-17 13:37:12.198  INFO 9788 --- [http-nio-22222-exec-5] com.java.interview.aop.WebLogAspect      : 进入登录接口之前
+2018-03-17 13:37:12.199  INFO 9788 --- [http-nio-22222-exec-5] com.java.interview.aop.WebLogAspect      : 环绕增强方法结束后进入
+2018-03-17 13:37:12.199  INFO 9788 --- [http-nio-22222-exec-5] com.java.interview.aop.WebLogAspect      : 最终增强，方法结束后进入
+2018-03-17 13:37:12.199  INFO 9788 --- [http-nio-22222-exec-5] com.java.interview.aop.WebLogAspect      : 后置增强方法结束后进入
+2018-03-17 13:37:53.208  INFO 9788 --- [http-nio-22222-exec-6] com.java.interview.aop.WebLogAspect      : 环绕增强方法之前进入
+2018-03-17 13:37:53.209  INFO 9788 --- [http-nio-22222-exec-6] com.java.interview.aop.WebLogAspect      : 进入登录接口之前
+2018-03-17 13:37:53.209  INFO 9788 --- [http-nio-22222-exec-6] com.java.interview.aop.WebLogAspect      : 环绕增强方法结束后进入
+2018-03-17 13:37:53.210  INFO 9788 --- [http-nio-22222-exec-6] com.java.interview.aop.WebLogAspect      : 最终增强，方法结束后进入
+2018-03-17 13:37:53.210  INFO 9788 --- [http-nio-22222-exec-6] com.java.interview.aop.WebLogAspect      : 后置增强方法结束后进入
+2018-03-17 13:38:50.373  INFO 9788 --- [http-nio-22222-exec-7] com.java.interview.aop.WebLogAspect      : 环绕增强方法之前进入
+2018-03-17 13:38:52.826  INFO 9788 --- [http-nio-22222-exec-7] com.java.interview.aop.WebLogAspect      : 进入登录接口之前
+2018-03-17 13:38:55.494  INFO 9788 --- [http-nio-22222-exec-7] com.java.interview.aop.WebLogAspect      : 环绕增强方法结束后进入
+2018-03-17 13:38:58.631  INFO 9788 --- [http-nio-22222-exec-7] com.java.interview.aop.WebLogAspect      : 最终增强，方法结束后进入
+2018-03-17 13:38:59.925  INFO 9788 --- [http-nio-22222-exec-7] com.java.interview.aop.WebLogAspect      : 后置增强方法结束后进入
+2018-03-17 13:41:21.666  INFO 9696 --- [main] c.j.interview.JavaInterviewApplication   : Starting JavaInterviewApplication on SHICHANGJIAN with PID 9696 (D:\Users\shichangjian.MEIXIN\workspace\testProject\java-interview\target\classes started by shichangjian in D:\Users\shichangjian.MEIXIN\workspace\testProject\java-interview)
+2018-03-17 13:41:21.671  INFO 9696 --- [main] c.j.interview.JavaInterviewApplication   : No active profile set, falling back to default profiles: default
+2018-03-17 13:41:21.739  INFO 9696 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@363a52f: startup date [Sat Mar 17 13:41:21 CST 2018]; root of context hierarchy
+2018-03-17 13:41:22.610  INFO 9696 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2018-03-17 13:41:24.791  INFO 9696 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 22222 (http)
+2018-03-17 13:41:24.808  INFO 9696 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-03-17 13:41:24.809  INFO 9696 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.32
+2018-03-17 13:41:24.952  INFO 9696 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-17 13:41:24.953  INFO 9696 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3219 ms
+2018-03-17 13:41:27.394  INFO 9696 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-17 13:41:27.395  INFO 9696 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-17 13:41:27.395  INFO 9696 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-17 13:41:27.396  INFO 9696 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-17 13:41:27.396  INFO 9696 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'MyFilter' to urls: [/a/*]
+2018-03-17 13:41:27.396  INFO 9696 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'modifyParametersFilter' to urls: [/a/*]
+2018-03-17 13:41:27.396  INFO 9696 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'testFilter1' to urls: [/*]
+2018-03-17 13:41:27.396  INFO 9696 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'tokenAuthorFilter' to urls: [/login/*]
+2018-03-17 13:41:27.397  INFO 9696 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-17 13:41:28.556  INFO 9696 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@363a52f: startup date [Sat Mar 17 13:41:21 CST 2018]; root of context hierarchy
+2018-03-17 13:41:28.834  INFO 9696 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a/httpClientTest]}" onto public java.lang.String com.java.interview.controller.ClientTest.httpclient(java.lang.String) throws java.lang.Exception
+2018-03-17 13:41:28.835  INFO 9696 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/httpClientTest2]}" onto public java.lang.String com.java.interview.controller.ClientTest.httpclient(com.java.interview.util.User) throws java.lang.Exception
+2018-03-17 13:41:28.837  INFO 9696 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test],methods=[GET]}" onto public void com.java.interview.httpclient.HttpClientManagerFactoryBenTest.test() throws org.apache.http.client.ClientProtocolException,java.io.IOException,java.lang.InterruptedException,java.util.concurrent.ExecutionException
+2018-03-17 13:41:28.837  INFO 9696 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/httpThreadPool]}" onto public java.lang.String com.java.interview.httpclient.HttpClientManagerFactoryBenTest.httpThreadPool() throws org.apache.http.ParseException,java.io.IOException,java.lang.InterruptedException,java.util.concurrent.ExecutionException
+2018-03-17 13:41:28.838  INFO 9696 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/loadProperties],methods=[GET]}" onto public void com.java.interview.properties.DynamicConfig.loadProperties(java.lang.String,java.lang.String)
+2018-03-17 13:41:28.841  INFO 9696 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-17 13:41:28.842  INFO 9696 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-17 13:41:29.041  INFO 9696 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-17 13:41:29.041  INFO 9696 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-17 13:41:29.157  INFO 9696 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-17 13:41:29.647  INFO 9696 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-03-17 13:41:29.757  INFO 9696 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 22222 (http)
+2018-03-17 13:41:29.772  INFO 9696 --- [main] c.j.interview.JavaInterviewApplication   : Started JavaInterviewApplication in 8.94 seconds (JVM running for 9.545)
+2018-03-17 13:41:38.076  INFO 9696 --- [http-nio-22222-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-03-17 13:41:38.077  INFO 9696 --- [http-nio-22222-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-03-17 13:41:38.143  INFO 9696 --- [http-nio-22222-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 66 ms
+2018-03-17 13:41:46.410  INFO 9696 --- [http-nio-22222-exec-1] com.java.interview.aop.WebLogAspect      : 环绕增强方法之前进入
+2018-03-17 13:41:47.830  INFO 9696 --- [http-nio-22222-exec-1] com.java.interview.aop.WebLogAspect      : 进入登录接口之前
+2018-03-17 13:41:59.261  INFO 9696 --- [http-nio-22222-exec-1] com.java.interview.aop.WebLogAspect      : 最终增强，方法结束后进入
+2018-03-17 13:42:02.956  INFO 9696 --- [http-nio-22222-exec-1] com.java.interview.aop.WebLogAspect      : 后置增强方法结束后进入
+2018-03-17 14:04:00.057  INFO 10108 --- [main] c.j.interview.JavaInterviewApplication   : Starting JavaInterviewApplication on SHICHANGJIAN with PID 10108 (D:\Users\shichangjian.MEIXIN\workspace\testProject\java-interview\target\classes started by shichangjian in D:\Users\shichangjian.MEIXIN\workspace\testProject\java-interview)
+2018-03-17 14:04:00.065  INFO 10108 --- [main] c.j.interview.JavaInterviewApplication   : No active profile set, falling back to default profiles: default
+2018-03-17 14:04:00.133  INFO 10108 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68df9280: startup date [Sat Mar 17 14:04:00 CST 2018]; root of context hierarchy
+2018-03-17 14:04:00.874  INFO 10108 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2018-03-17 14:04:02.599  INFO 10108 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 22222 (http)
+2018-03-17 14:04:02.618  INFO 10108 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-03-17 14:04:02.619  INFO 10108 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.32
+2018-03-17 14:04:02.797  INFO 10108 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-17 14:04:02.797  INFO 10108 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2668 ms
+2018-03-17 14:04:03.697  INFO 10108 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-17 14:04:03.698  INFO 10108 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-17 14:04:03.698  INFO 10108 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-17 14:04:03.698  INFO 10108 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-17 14:04:03.699  INFO 10108 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'MyFilter' to urls: [/a/*]
+2018-03-17 14:04:03.699  INFO 10108 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'modifyParametersFilter' to urls: [/a/*]
+2018-03-17 14:04:03.699  INFO 10108 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'testFilter1' to urls: [/*]
+2018-03-17 14:04:03.699  INFO 10108 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'tokenAuthorFilter' to urls: [/login/*]
+2018-03-17 14:04:03.699  INFO 10108 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-17 14:04:04.496  INFO 10108 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68df9280: startup date [Sat Mar 17 14:04:00 CST 2018]; root of context hierarchy
+2018-03-17 14:04:04.617  INFO 10108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a/httpClientTest]}" onto public java.lang.String com.java.interview.controller.ClientTest.httpclient(java.lang.String) throws java.lang.Exception
+2018-03-17 14:04:04.619  INFO 10108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/httpClientTest2]}" onto public java.lang.String com.java.interview.controller.ClientTest.httpclient(com.java.interview.util.User) throws java.lang.Exception
+2018-03-17 14:04:04.620  INFO 10108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test],methods=[GET]}" onto public void com.java.interview.httpclient.HttpClientManagerFactoryBenTest.test() throws org.apache.http.client.ClientProtocolException,java.io.IOException,java.lang.InterruptedException,java.util.concurrent.ExecutionException
+2018-03-17 14:04:04.621  INFO 10108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/httpThreadPool]}" onto public java.lang.String com.java.interview.httpclient.HttpClientManagerFactoryBenTest.httpThreadPool() throws org.apache.http.ParseException,java.io.IOException,java.lang.InterruptedException,java.util.concurrent.ExecutionException
+2018-03-17 14:04:04.622  INFO 10108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/loadProperties],methods=[GET]}" onto public void com.java.interview.properties.DynamicConfig.loadProperties(java.lang.String,java.lang.String)
+2018-03-17 14:04:04.625  INFO 10108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-17 14:04:04.625  INFO 10108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-17 14:04:04.693  INFO 10108 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-17 14:04:04.694  INFO 10108 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-17 14:04:04.758  INFO 10108 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-17 14:04:05.057  INFO 10108 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-03-17 14:04:05.147  INFO 10108 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 22222 (http)
+2018-03-17 14:04:05.151  INFO 10108 --- [main] c.j.interview.JavaInterviewApplication   : Started JavaInterviewApplication in 5.984 seconds (JVM running for 6.569)
+2018-03-17 14:04:31.586  INFO 10108 --- [http-nio-22222-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-03-17 14:04:31.587  INFO 10108 --- [http-nio-22222-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-03-17 14:04:31.614  INFO 10108 --- [http-nio-22222-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2018-03-17 14:04:48.712 ERROR 10108 --- [http-nio-22222-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at com.java.interview.aop.WebLogAspect.beforeExec(WebLogAspect.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:620)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:609)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:68)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:168)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.java.interview.controller.ClientTest$$EnhancerBySpringCGLIB$$52710e91.httpclient(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:110)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:817)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:731)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:959)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:893)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:968)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:859)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:844)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:292)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at com.java.interview.filter.TestFilterFirst.doFilter(TestFilterFirst.java:37)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at com.java.interview.filter.ModifyParametersFilter.doFilterInternal(ModifyParametersFilter.java:51)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at com.java.interview.filter.ConfigurationFilter$MyFilter.doFilter(ConfigurationFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:522)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1095)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:672)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+2018-03-17 14:32:13.152  INFO 8788 --- [main] c.j.interview.JavaInterviewApplication   : Starting JavaInterviewApplication on SHICHANGJIAN with PID 8788 (D:\Users\shichangjian.MEIXIN\workspace\testProject\java-interview\target\classes started by shichangjian in D:\Users\shichangjian.MEIXIN\workspace\testProject\java-interview)
+2018-03-17 14:32:13.158  INFO 8788 --- [main] c.j.interview.JavaInterviewApplication   : No active profile set, falling back to default profiles: default
+2018-03-17 14:32:13.228  INFO 8788 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3da30852: startup date [Sat Mar 17 14:32:13 CST 2018]; root of context hierarchy
+2018-03-17 14:32:13.987  INFO 8788 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2018-03-17 14:32:15.722  INFO 8788 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 22222 (http)
+2018-03-17 14:32:15.739  INFO 8788 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-03-17 14:32:15.741  INFO 8788 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.32
+2018-03-17 14:32:15.917  INFO 8788 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-17 14:32:15.917  INFO 8788 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2694 ms
+2018-03-17 14:32:16.852  INFO 8788 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-17 14:32:16.853  INFO 8788 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-17 14:32:16.853  INFO 8788 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-17 14:32:16.853  INFO 8788 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-17 14:32:16.853  INFO 8788 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'MyFilter' to urls: [/a/*]
+2018-03-17 14:32:16.854  INFO 8788 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'modifyParametersFilter' to urls: [/a/*]
+2018-03-17 14:32:16.854  INFO 8788 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'testFilter1' to urls: [/*]
+2018-03-17 14:32:16.854  INFO 8788 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'tokenAuthorFilter' to urls: [/login/*]
+2018-03-17 14:32:16.855  INFO 8788 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-17 14:32:17.758  INFO 8788 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3da30852: startup date [Sat Mar 17 14:32:13 CST 2018]; root of context hierarchy
+2018-03-17 14:32:17.881  INFO 8788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a/httpClientTest]}" onto public java.lang.String com.java.interview.controller.ClientTest.httpclient(java.lang.String) throws java.lang.Exception
+2018-03-17 14:32:17.883  INFO 8788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/httpClientTest2]}" onto public java.lang.String com.java.interview.controller.ClientTest.httpclient(com.java.interview.util.User) throws java.lang.Exception
+2018-03-17 14:32:17.884  INFO 8788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test],methods=[GET]}" onto public void com.java.interview.httpclient.HttpClientManagerFactoryBenTest.test() throws org.apache.http.client.ClientProtocolException,java.io.IOException,java.lang.InterruptedException,java.util.concurrent.ExecutionException
+2018-03-17 14:32:17.884  INFO 8788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/httpThreadPool]}" onto public java.lang.String com.java.interview.httpclient.HttpClientManagerFactoryBenTest.httpThreadPool() throws org.apache.http.ParseException,java.io.IOException,java.lang.InterruptedException,java.util.concurrent.ExecutionException
+2018-03-17 14:32:17.885  INFO 8788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/loadProperties],methods=[GET]}" onto public void com.java.interview.properties.DynamicConfig.loadProperties(java.lang.String,java.lang.String)
+2018-03-17 14:32:17.887  INFO 8788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-17 14:32:17.888  INFO 8788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-17 14:32:17.960  INFO 8788 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-17 14:32:17.961  INFO 8788 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-17 14:32:18.026  INFO 8788 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-17 14:32:18.379  INFO 8788 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-03-17 14:32:18.479  INFO 8788 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 22222 (http)
+2018-03-17 14:32:18.488  INFO 8788 --- [main] c.j.interview.JavaInterviewApplication   : Started JavaInterviewApplication in 6.205 seconds (JVM running for 6.813)
+2018-03-17 14:34:02.400  INFO 8788 --- [http-nio-22222-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-03-17 14:34:02.401  INFO 8788 --- [http-nio-22222-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-03-17 14:34:02.434  INFO 8788 --- [http-nio-22222-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 33 ms
+2018-03-17 14:47:13.585  INFO 9788 --- [main] c.j.interview.JavaInterviewApplication   : Starting JavaInterviewApplication on SHICHANGJIAN with PID 9788 (D:\Users\shichangjian.MEIXIN\workspace\testProject\java-interview\target\classes started by shichangjian in D:\Users\shichangjian.MEIXIN\workspace\testProject\java-interview)
+2018-03-17 14:47:13.592  INFO 9788 --- [main] c.j.interview.JavaInterviewApplication   : No active profile set, falling back to default profiles: default
+2018-03-17 14:47:13.665  INFO 9788 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@43b9fd5: startup date [Sat Mar 17 14:47:13 CST 2018]; root of context hierarchy
+2018-03-17 14:47:14.427  INFO 9788 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2018-03-17 14:47:16.307  INFO 9788 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 22222 (http)
+2018-03-17 14:47:16.328  INFO 9788 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-03-17 14:47:16.330  INFO 9788 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.32
+2018-03-17 14:47:16.508  INFO 9788 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-17 14:47:16.509  INFO 9788 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2848 ms
+2018-03-17 14:47:17.423  INFO 9788 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-17 14:47:17.424  INFO 9788 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-17 14:47:17.424  INFO 9788 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-17 14:47:17.424  INFO 9788 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-17 14:47:17.424  INFO 9788 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'MyFilter' to urls: [/a/*]
+2018-03-17 14:47:17.424  INFO 9788 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'modifyParametersFilter' to urls: [/a/*]
+2018-03-17 14:47:17.425  INFO 9788 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'testFilter1' to urls: [/*]
+2018-03-17 14:47:17.425  INFO 9788 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'tokenAuthorFilter' to urls: [/login/*]
+2018-03-17 14:47:17.425  INFO 9788 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-17 14:47:18.220  INFO 9788 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@43b9fd5: startup date [Sat Mar 17 14:47:13 CST 2018]; root of context hierarchy
+2018-03-17 14:47:18.347  INFO 9788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a/httpClientTest]}" onto public java.lang.String com.java.interview.controller.ClientTest.httpclient(java.lang.String) throws java.lang.Exception
+2018-03-17 14:47:18.348  INFO 9788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/httpClientTest2]}" onto public java.lang.String com.java.interview.controller.ClientTest.httpclient(com.java.interview.util.User) throws java.lang.Exception
+2018-03-17 14:47:18.350  INFO 9788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test],methods=[GET]}" onto public void com.java.interview.httpclient.HttpClientManagerFactoryBenTest.test() throws org.apache.http.client.ClientProtocolException,java.io.IOException,java.lang.InterruptedException,java.util.concurrent.ExecutionException
+2018-03-17 14:47:18.350  INFO 9788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/httpThreadPool]}" onto public java.lang.String com.java.interview.httpclient.HttpClientManagerFactoryBenTest.httpThreadPool() throws org.apache.http.ParseException,java.io.IOException,java.lang.InterruptedException,java.util.concurrent.ExecutionException
+2018-03-17 14:47:18.351  INFO 9788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/loadProperties],methods=[GET]}" onto public void com.java.interview.properties.DynamicConfig.loadProperties(java.lang.String,java.lang.String)
+2018-03-17 14:47:18.353  INFO 9788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-17 14:47:18.354  INFO 9788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-17 14:47:18.429  INFO 9788 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-17 14:47:18.430  INFO 9788 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-17 14:47:18.504  INFO 9788 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-17 14:47:18.846  INFO 9788 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-03-17 14:47:18.950  INFO 9788 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 22222 (http)
+2018-03-17 14:47:18.956  INFO 9788 --- [main] c.j.interview.JavaInterviewApplication   : Started JavaInterviewApplication in 6.249 seconds (JVM running for 6.927)
+2018-03-17 14:47:28.917  INFO 9788 --- [http-nio-22222-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-03-17 14:47:28.918  INFO 9788 --- [http-nio-22222-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-03-17 14:47:28.952  INFO 9788 --- [http-nio-22222-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 34 ms
+2018-03-17 14:53:39.564  INFO 5160 --- [main] c.j.interview.JavaInterviewApplication   : Starting JavaInterviewApplication on SHICHANGJIAN with PID 5160 (D:\Users\shichangjian.MEIXIN\workspace\testProject\java-interview\target\classes started by shichangjian in D:\Users\shichangjian.MEIXIN\workspace\testProject\java-interview)
+2018-03-17 14:53:39.572  INFO 5160 --- [main] c.j.interview.JavaInterviewApplication   : No active profile set, falling back to default profiles: default
+2018-03-17 14:53:39.642  INFO 5160 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6531a794: startup date [Sat Mar 17 14:53:39 CST 2018]; root of context hierarchy
+2018-03-17 14:53:40.408  INFO 5160 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2018-03-17 14:53:42.224  INFO 5160 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 22222 (http)
+2018-03-17 14:53:42.243  INFO 5160 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-03-17 14:53:42.245  INFO 5160 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.32
+2018-03-17 14:53:42.414  INFO 5160 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-17 14:53:42.414  INFO 5160 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2777 ms
+2018-03-17 14:53:43.500  INFO 5160 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-17 14:53:43.500  INFO 5160 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-17 14:53:43.501  INFO 5160 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-17 14:53:43.501  INFO 5160 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-17 14:53:43.501  INFO 5160 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'MyFilter' to urls: [/a/*]
+2018-03-17 14:53:43.501  INFO 5160 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'modifyParametersFilter' to urls: [/a/*]
+2018-03-17 14:53:43.502  INFO 5160 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'testFilter1' to urls: [/*]
+2018-03-17 14:53:43.502  INFO 5160 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'tokenAuthorFilter' to urls: [/login/*]
+2018-03-17 14:53:43.502  INFO 5160 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-17 14:53:44.326  INFO 5160 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6531a794: startup date [Sat Mar 17 14:53:39 CST 2018]; root of context hierarchy
+2018-03-17 14:53:44.621  INFO 5160 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a/httpClientTest]}" onto public java.lang.String com.java.interview.controller.ClientTest.httpclient(java.lang.String) throws java.lang.Exception
+2018-03-17 14:53:44.622  INFO 5160 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/httpClientTest2]}" onto public java.lang.String com.java.interview.controller.ClientTest.httpclient(com.java.interview.util.User) throws java.lang.Exception
+2018-03-17 14:53:44.624  INFO 5160 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test],methods=[GET]}" onto public void com.java.interview.httpclient.HttpClientManagerFactoryBenTest.test() throws org.apache.http.client.ClientProtocolException,java.io.IOException,java.lang.InterruptedException,java.util.concurrent.ExecutionException
+2018-03-17 14:53:44.626  INFO 5160 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/httpThreadPool]}" onto public java.lang.String com.java.interview.httpclient.HttpClientManagerFactoryBenTest.httpThreadPool() throws org.apache.http.ParseException,java.io.IOException,java.lang.InterruptedException,java.util.concurrent.ExecutionException
+2018-03-17 14:53:44.626  INFO 5160 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/loadProperties],methods=[GET]}" onto public void com.java.interview.properties.DynamicConfig.loadProperties(java.lang.String,java.lang.String)
+2018-03-17 14:53:44.629  INFO 5160 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-17 14:53:44.630  INFO 5160 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-17 14:53:44.700  INFO 5160 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-17 14:53:44.701  INFO 5160 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-17 14:53:44.770  INFO 5160 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-17 14:53:45.067  INFO 5160 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-03-17 14:53:45.161  INFO 5160 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 22222 (http)
+2018-03-17 14:53:45.167  INFO 5160 --- [main] c.j.interview.JavaInterviewApplication   : Started JavaInterviewApplication in 6.53 seconds (JVM running for 7.067)
+2018-03-17 14:53:46.254  INFO 5160 --- [http-nio-22222-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-03-17 14:53:46.255  INFO 5160 --- [http-nio-22222-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-03-17 14:53:46.288  INFO 5160 --- [http-nio-22222-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 33 ms
+2018-03-17 14:55:28.698  INFO 9804 --- [main] c.j.interview.JavaInterviewApplication   : Starting JavaInterviewApplication on SHICHANGJIAN with PID 9804 (D:\Users\shichangjian.MEIXIN\workspace\testProject\java-interview\target\classes started by shichangjian in D:\Users\shichangjian.MEIXIN\workspace\testProject\java-interview)
+2018-03-17 14:55:28.703  INFO 9804 --- [main] c.j.interview.JavaInterviewApplication   : No active profile set, falling back to default profiles: default
+2018-03-17 14:55:28.771  INFO 9804 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5adb0db3: startup date [Sat Mar 17 14:55:28 CST 2018]; root of context hierarchy
+2018-03-17 14:55:29.681  INFO 9804 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2018-03-17 14:55:31.504  INFO 9804 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 22222 (http)
+2018-03-17 14:55:31.524  INFO 9804 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-03-17 14:55:31.526  INFO 9804 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.32
+2018-03-17 14:55:31.692  INFO 9804 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-17 14:55:31.692  INFO 9804 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2926 ms
+2018-03-17 14:55:32.564  INFO 9804 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-17 14:55:32.564  INFO 9804 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-17 14:55:32.565  INFO 9804 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-17 14:55:32.565  INFO 9804 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-17 14:55:32.565  INFO 9804 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'MyFilter' to urls: [/a/*]
+2018-03-17 14:55:32.565  INFO 9804 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'modifyParametersFilter' to urls: [/a/*]
+2018-03-17 14:55:32.566  INFO 9804 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'testFilter1' to urls: [/*]
+2018-03-17 14:55:32.566  INFO 9804 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'tokenAuthorFilter' to urls: [/login/*]
+2018-03-17 14:55:32.566  INFO 9804 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-17 14:55:33.407  INFO 9804 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5adb0db3: startup date [Sat Mar 17 14:55:28 CST 2018]; root of context hierarchy
+2018-03-17 14:55:33.551  INFO 9804 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a/httpClientTest]}" onto public java.lang.String com.java.interview.controller.ClientTest.httpclient(java.lang.String) throws java.lang.Exception
+2018-03-17 14:55:33.552  INFO 9804 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/httpClientTest2]}" onto public java.lang.String com.java.interview.controller.ClientTest.httpclient(com.java.interview.util.User) throws java.lang.Exception
+2018-03-17 14:55:33.553  INFO 9804 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test],methods=[GET]}" onto public void com.java.interview.httpclient.HttpClientManagerFactoryBenTest.test() throws org.apache.http.client.ClientProtocolException,java.io.IOException,java.lang.InterruptedException,java.util.concurrent.ExecutionException
+2018-03-17 14:55:33.554  INFO 9804 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/httpThreadPool]}" onto public java.lang.String com.java.interview.httpclient.HttpClientManagerFactoryBenTest.httpThreadPool() throws org.apache.http.ParseException,java.io.IOException,java.lang.InterruptedException,java.util.concurrent.ExecutionException
+2018-03-17 14:55:33.555  INFO 9804 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/loadProperties],methods=[GET]}" onto public void com.java.interview.properties.DynamicConfig.loadProperties(java.lang.String,java.lang.String)
+2018-03-17 14:55:33.558  INFO 9804 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-17 14:55:33.558  INFO 9804 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-17 14:55:33.655  INFO 9804 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-17 14:55:33.656  INFO 9804 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-17 14:55:33.744  INFO 9804 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-17 14:55:34.118  INFO 9804 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-03-17 14:55:34.235  INFO 9804 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 22222 (http)
+2018-03-17 14:55:34.241  INFO 9804 --- [main] c.j.interview.JavaInterviewApplication   : Started JavaInterviewApplication in 6.427 seconds (JVM running for 7.026)
+2018-03-17 14:55:34.970  INFO 9804 --- [http-nio-22222-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-03-17 14:55:34.971  INFO 9804 --- [http-nio-22222-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-03-17 14:55:35.013  INFO 9804 --- [http-nio-22222-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 42 ms
