@@ -31,7 +31,8 @@ public class ModifyParametersFilter extends OncePerRequestFilter {
         String token = request.getHeader("token");
 
         String ua = request.getHeader("User-Agent"); //User-Agent 不用区分大小写
-
+        System.err.println("user-agent===" + ua);
+        
         if (DeviceUtils.isMobileDevice(request)) {
             System.err.println("访问设备来自手机");
         }
