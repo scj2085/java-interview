@@ -51,7 +51,8 @@ public class HttpsTest {
         String content = EntityUtils.toString(entity,"utf-8");
         System.out.println(content);
         hp.close();
-
+        //测试
+        //ceshi
     }
 
 }
